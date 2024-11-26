@@ -1,4 +1,16 @@
 export default function Hero() {
+
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "+6285222803077"; // Replace with the recipient's phone number
+        const message = "Halo, saya mau beli cuankinya nih!."; // Replace with your message
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+          message
+        )}`;
+    
+        // Open WhatsApp
+        window.open(whatsappURL, "_blank");
+      };
+
     return (
         <div className="relative bg-gradient-to-r from-[#EF3F23] via-[#E8684A] to-[#398790] py-16 font-[sans-serif]">
             {/* Background Image */}
@@ -19,6 +31,7 @@ export default function Hero() {
 
                 {/* Button */}
                 <button
+                    onClick={handleWhatsAppClick}
                     type="button"
                     className="bg-[#FF6B3E] text-white text-base tracking-wide px-6 py-3 rounded-full transition duration-300 ease-in-out shadow-lg hover:bg-[#D83E23] hover:shadow-xl"
                 >
