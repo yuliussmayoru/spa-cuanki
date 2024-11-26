@@ -9,6 +9,17 @@ export default function Produk() {
       { id: 7, name: "Batagor Goreng", price: "Rp12.000", image: "https://assets.pikiran-rakyat.com/crop/0x0:0x0/703x0/webp/photo/2023/09/11/3322607591.png" },
       { id: 8, name: "Siomay", price: "Rp12.000", image: "https://png.pngtree.com/thumb_back/fh260/background/20240630/pngtree-siomay-baso-tahu-bandung-steamed-dumpling-image_15830559.jpg" },
     ];
+
+    const handleOrderClick = (productName: string) => {
+        const phoneNumber = "+6285222803077"; // Replace with your business WhatsApp number
+        const message = `Halo, saya mau beli ${productName}`;
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+          message
+        )}`;
+    
+        // Redirect to WhatsApp
+        window.open(whatsappURL, "_blank");
+      };
   
     return (
       <section className="py-12 bg-[#fbf1d5]">
@@ -20,23 +31,24 @@ export default function Produk() {
   
           {/* Menu Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {menuItems.map(item => (
-              <div
+            {menuItems.map((item) => (
+                <div
                 key={item.id}
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-              >
+                >
                 <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">{item.name}</h3>
-                  <p className="text-[#EF3F23] font-semibold text-lg">{item.price}</p>
-                  <button
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">{item.name}</h3>
+                    <p className="text-[#EF3F23] font-semibold text-lg">{item.price}</p>
+                    <button
                     type="button"
+                    onClick={() => handleOrderClick(item.name)}
                     className="mt-4 w-full bg-[#398790] text-white py-2 px-4 rounded-full hover:bg-[#316e6d] transition-colors duration-300"
-                  >
+                    >
                     Pesan Sekarang
-                  </button>
+                    </button>
                 </div>
-              </div>
+                </div>
             ))}
           </div>
         </div>
