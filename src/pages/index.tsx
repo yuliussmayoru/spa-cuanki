@@ -30,7 +30,8 @@ export default function HomePage() {
           }`}
         >
           {/* Loading Animation */}
-          <div className="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+          {/* <div className="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div> */}
+          <img src="/assets/merah.webp" alt="Loading" className="w-56" />
         </div>
       )}
 

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url('/fonts/Kaushan_Script/KaushanScript-Regular.woff2') format('woff2'),
+       url('/fonts/Kaushan_Script/KaushanScript-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.font-kaushan {
+  font-family: 'Kaushan Script', sans-serif;
+}

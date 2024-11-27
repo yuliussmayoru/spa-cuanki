@@ -32,8 +32,8 @@ export default function NavigationWrapper() {
     <header className="flex shadow-md py-4 px-4 sm:px-10 bg-[#EF3F23] font-sans min-h-[70px] tracking-wide relative z-50">
       <div className="flex items-center justify-between gap-5 w-full">
         {/* Logo */}
-        <a href="#">
-          <span className="text-white font-bold text-lg">Logo</span>
+        <a href="#" className="font-kaushan text-3xl text-white">
+            Cuanki Djiwa
         </a>
 
         {/* Navigation Menu */}
@@ -54,9 +54,9 @@ export default function NavigationWrapper() {
 
           <ul className="lg:flex lg:gap-x-8 space-y-4 lg:space-y-0 mt-10 lg:mt-0">
             {/* Mobile Menu Logo */}
-            <li className="mb-6 top-0 absolute px-3 py-8 lg:hidden">
-              <a href="#" className="text-white font-bold text-lg">
-                Logo Disini
+            <li className="mb-6 top-0 absolute px-2 py-6 lg:hidden">
+              <a href="#" className="text-white font-kaushan text-3xl">
+                Cuanki Djiwa
               </a>
             </li>
             {/* Dynamic Menu Items */}
@@ -84,7 +84,7 @@ export default function NavigationWrapper() {
         <div className="flex max-lg:ml-auto space-x-3">
           <button
             onClick={handleWhatsAppClick}
-            className="px-4 py-2 text-sm rounded-full font-bold text-[#EF3F23] border-2 border-[#FFFFFF] bg-[#FFFFFF] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#FFFFFF]">
+            className="px-4 py-2 text-sm rounded-full font-kaushan text-[#EF3F23] border-2 border-[#FFFFFF] bg-[#FFFFFF] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#FFFFFF]">
             Whatsapp
           </button>
 
